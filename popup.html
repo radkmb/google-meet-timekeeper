@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Google Meet Timer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<style>
+		body {
+			width: 300px;
+			padding: 10px;
+			font-family: 'Noto Sans JP', sans-serif;
+		}
+
+		#message {
+			color: red;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		.input-container {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.input-container input {
+			width: 50px;
+			margin: 0px 5px;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+
+		button {
+			padding: 0px 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			margin: 0px 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Google Meetタイマー設定</h2>
+	<div class="input-container">
+		<input id="timerInputHours" type="number" min="0" placeholder="時間">
+		<p id="timerInputHoursString">時</p>
+		<input id="timerInputMinutes" type="number" min="0" placeholder="分">
+		<p id="timerInputMinutesString">分</p>
+		<input id="timerInputSeconds" type="number" min="0" placeholder="秒">
+		<p id="timerInputSecondsString">秒</p>
+	</div>
+	<button id="setTimerButton">設定</button>
+	<button id="resetTimerButton">リセット</button>
+	<div id="message"></div>
+	<script src="popup.js"></script>
+</body>
+
+</html>
